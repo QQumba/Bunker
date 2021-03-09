@@ -1,0 +1,26 @@
+﻿[
+  {
+    "StatType": "Health",
+    "BaseMaxValue": 100,
+    "BaseMinValue": 0,
+    "BaseValueChangeRate": 0
+  },
+  {
+    "StatType": "Hunger",
+    "BaseMaxValue": 100,
+    "BaseMinValue": 0,
+    "BaseValueChangeRate": -10
+  },
+  {
+    "StatType": "Thirst",
+    "BaseMaxValue": 100,
+    "BaseMinValue": 0,
+    "BaseValueChangeRate": -10
+  },
+  {
+    "StatType": "Sanity",
+    "BaseMaxValue": 100,
+    "BaseMinValue": 0,
+    "BaseValueChangeRate": -10
+  }
+]

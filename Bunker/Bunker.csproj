@@ -5,4 +5,22 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <None Remove="Data\StatTypes.json" />
+      <None Update="Data\stats.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Data\equipment.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1-beta1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Environment\Extensions" />
+    </ItemGroup>
+
 </Project>

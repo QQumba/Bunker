@@ -11,3 +11,6 @@ C:\projects\University\apz\Bunker\Bunker\obj\Debug\netcoreapp3.1\Bunker.csproj.C
 C:\projects\University\apz\Bunker\Bunker\obj\Debug\netcoreapp3.1\Bunker.dll
 C:\projects\University\apz\Bunker\Bunker\obj\Debug\netcoreapp3.1\Bunker.pdb
 C:\projects\University\apz\Bunker\Bunker\obj\Debug\netcoreapp3.1\Bunker.genruntimeconfig.cache
+C:\projects\University\apz\Bunker\Bunker\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\projects\University\apz\Bunker\Bunker\obj\Debug\netcoreapp3.1\Bunker.csproj.CopyComplete
+C:\projects\University\apz\Bunker\Bunker\bin\Debug\netcoreapp3.1\Data\stats.json

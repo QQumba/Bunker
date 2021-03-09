@@ -1,6 +1,8 @@
-﻿namespace Bunker.Environment.Stats
+﻿using System;
+
+namespace Bunker.Environment.Stats
 {
-    public abstract class Stat
+    public class Stat
     {
         private readonly int _maxValue;
         private readonly int _minValue;
@@ -10,7 +12,7 @@
         private int _currentMaxValue;
         private int _changeRate;
 
-        public Stat(int value ,int minValue, int maxValue, int changeRate)
+        public Stat(int value ,int minValue, int maxValue, int changeRate, StatInfo info)
         {
             if (value < minValue)
             {
@@ -30,15 +32,17 @@
             _currentMinValue = minValue;
             _currentMaxValue = maxValue;
             _changeRate = changeRate;
+            Info = info;
         }
-        
+
+        public StatInfo Info { get; }
         public int MinValue => _minValue;
         public int MaxValue => _maxValue;
 
         public int Value
         {
             get => _value;
-            set => _value = SetBoundedValue(_value + value, _minValue, _maxValue);
+            set => _value = Math.Clamp(_value + value, _minValue, _maxValue);
         }
 
         public int CurrentMaxValue
@@ -46,10 +50,15 @@
             get => _currentMaxValue;
             set
             {
-                _currentMaxValue = SetBoundedValue(value, _minValue, _maxValue);
+                _currentMaxValue = Math.Clamp(value, _minValue, _maxValue);
                 if (_currentMinValue > _currentMaxValue)
                 {
                     _currentMinValue = _currentMaxValue;
+                }
+
+                if (_value > _currentMaxValue)
+                {
+                    _value = _currentMaxValue;
                 }
             }
         }
@@ -59,10 +68,15 @@
             get => _currentMinValue;
             set
             {
-                _currentMinValue = SetBoundedValue(value, _minValue, _currentMaxValue);
+                _currentMinValue = Math.Clamp(value, _minValue, _currentMaxValue);
                 if (_currentMaxValue < _currentMinValue)
                 {
                     _currentMaxValue = _currentMinValue;
+                }
+
+                if (_value < _currentMinValue)
+                {
+                    _value = _currentMinValue;
                 }
             }
         }
@@ -77,19 +91,6 @@
         public void Update()
         {
             Value += _changeRate;
-        }
-
-        private int SetBoundedValue(int value, int minValue, int maxValue)
-        {
-            if(value < minValue)
-            {
-                return minValue;
-            }
-            if(value > maxValue)
-            {
-                return maxValue;
-            }
-            return value;
         }
     }
 }

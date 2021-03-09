@@ -7,30 +7,48 @@ namespace Bunker.Environment
 {
     public class Person
     {
-        private readonly List<Stat> _stats;
-        
-        public Person(string name)
+        private readonly PersonStats _personStats;
+
+        private int _dayStarving;
+        private bool _isDead;
+
+        public Person(string name, PersonStats personStats)
         {
             Name = name;
-            Health = new Health(Health.MaxValue);
-            Hunger = new Hunger(Hunger.MaxValue);
-            Thirst = new Thirst(Thirst.MaxValue);
-
-            _stats = new List<Stat> { Health, Hunger, Thirst };
+            _personStats = personStats;
         }
         
-        public Stat Health { get; set; }
-        public Stat Hunger { get; set; }
-        public Stat Thirst { get; set; }
         public string Name { get; }
+
+        public int DayStarving => _dayStarving;
+        public bool IsDead => _isDead;
         
-        
+
         public void Update()
         {
-            foreach (var stat in _stats)
+            _personStats.Update();
+            var health = GetStat(StatType.Health);
+
+            if (GetStat(StatType.Hunger).Value < 20)
             {
-                stat.Update();
+                _dayStarving++;
+            }
+            else
+            {
+                _dayStarving = 0;
+            }
+
+            if (_dayStarving > 5)
+            {
+                health.Value -= 20;
+            }
+            
+            if (health.Value < health.MinValue)
+            {
+                _isDead = true;
             }
         }
+
+        public Stat GetStat(StatType type) => _personStats.GetStat(type);
     }
 }

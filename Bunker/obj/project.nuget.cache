@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "aeb0udSLj5h4Q2Pz+b/ubmJOjgHKB8sKBU1fhBFmz2Jb+bTyrgmumthQcjSzjlZhHGpafLN8ZUjufIUwqdWo0A==",
+  "dgSpecHash": "8CnQAlaW9IZjC63827cGM99cB9F0XlcvXZo9v5sszBpRlmkOzbAzQA4lPusRcBExUm0/Yh6qEOPsyz1EQtslVA==",
   "success": true,
   "projectFilePath": "C:\\projects\\University\\apz\\Bunker\\Bunker\\Bunker.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\nikita\\.nuget\\packages\\newtonsoft.json\\13.0.1-beta1\\newtonsoft.json.13.0.1-beta1.nupkg.sha512"
+  ],
   "logs": []
 }
