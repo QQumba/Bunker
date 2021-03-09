@@ -1,0 +1,13 @@
+C:\projects\University\apz\Bunker\Bunker\bin\Debug\netcoreapp3.1\Bunker.exe
+C:\projects\University\apz\Bunker\Bunker\bin\Debug\netcoreapp3.1\Bunker.deps.json
+C:\projects\University\apz\Bunker\Bunker\bin\Debug\netcoreapp3.1\Bunker.runtimeconfig.json
+C:\projects\University\apz\Bunker\Bunker\bin\Debug\netcoreapp3.1\Bunker.runtimeconfig.dev.json
+C:\projects\University\apz\Bunker\Bunker\bin\Debug\netcoreapp3.1\Bunker.dll
+C:\projects\University\apz\Bunker\Bunker\bin\Debug\netcoreapp3.1\Bunker.pdb
+C:\projects\University\apz\Bunker\Bunker\obj\Debug\netcoreapp3.1\Bunker.csprojAssemblyReference.cache
+C:\projects\University\apz\Bunker\Bunker\obj\Debug\netcoreapp3.1\Bunker.AssemblyInfoInputs.cache
+C:\projects\University\apz\Bunker\Bunker\obj\Debug\netcoreapp3.1\Bunker.AssemblyInfo.cs
+C:\projects\University\apz\Bunker\Bunker\obj\Debug\netcoreapp3.1\Bunker.csproj.CoreCompileInputs.cache
+C:\projects\University\apz\Bunker\Bunker\obj\Debug\netcoreapp3.1\Bunker.dll
+C:\projects\University\apz\Bunker\Bunker\obj\Debug\netcoreapp3.1\Bunker.pdb
+C:\projects\University\apz\Bunker\Bunker\obj\Debug\netcoreapp3.1\Bunker.genruntimeconfig.cache
